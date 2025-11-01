@@ -1,0 +1,9 @@
+.video-background {
+  position: fixed; /* Stays in place even when scrolling */
+  top: 0;
+  left: 0;
+  width: 100vw; /* 100% of the viewport width */
+  height: 100vh; /* 100% of the viewport height */
+  object-fit: cover; /* Fills the screen without distorting the aspect ratio */
+  z-index: -1; /* Puts the video BEHIND all other content */
+}
