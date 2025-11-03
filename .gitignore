@@ -1,0 +1,59 @@
+# Logs
+logs
+*.log
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+pnpm-debug.log*
+lerna-debug.log*
+
+# OS-generated files
+.DS_Store
+.DS_Store?
+._*
+.Spotlight-V100
+.Trashes
+ehthumbs.db
+Thumbs.db
+
+# IDE configuration files
+.idea/
+.vscode/
+*.suo
+*.ntvs*
+*.njsproj
+*.sln
+*.sw?
+
+# Dependency directories
+node_modules/
+jspm_packages/
+.pnpm-store
+
+# FRONTEND (Vite / CRA)
+frontend/dist
+frontend/.vite
+frontend/build
+frontend/out
+
+# FRONTEND Env
+frontend/.env*
+frontend/.env.local
+frontend/.env.development.local
+frontend/.env.test.local
+frontend/.env.production.local
+frontend/coverage
+
+# BACKEND (Node / Express)
+backend/.env
+
+# Potentially sensitive files
+*.pem
+*.key
+
+# TS build output
+*.tsbuildinfo
+
+# Zip / archive files
+*.zip
+*.rar
