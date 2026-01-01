@@ -26,7 +26,7 @@ const coreTeam = [
     {
         name: 'Arnav Varhade',
         role: 'Secretary',
-        imageUrl: '/Team/Arnav_Varhade.png',
+        imageUrl: '/Team/Arnav_Varhade.jpg',
         linkedin: 'https://www.linkedin.com/in/arnav-dinesh-varhade-18ba73258',
         description: 'The organized strategist, ensuring seamless coordination, communication, and execution of plans.'
     },
