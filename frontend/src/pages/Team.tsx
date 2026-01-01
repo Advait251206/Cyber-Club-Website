@@ -38,16 +38,16 @@ const coreTeam = [
         description: 'A creative visionary, transforming ideas into impactful designs that captivate and inspire.'
     },
     {
-        name: '(Om Gatlewar)',
+        name: 'Om Gatlewar',
         role: 'Web Dev Lead',
-        imageUrl: '/Team/Om_Gatlewar.png',
-        linkedin: '#',
+        imageUrl: '/Team/Om_Gatlewar.jpg',
+        linkedin: 'https://www.linkedin.com/in/omgatlewar/',
         description: 'The architect behind seamless digital experiences, driving innovation in web development.'
     },
     {
         name: 'Harshika Rathod',
         role: 'Documentation Lead',
-        imageUrl: '/Team/Harshika_Rathod.png',
+        imageUrl: '/Team/Harshika_Rathod.jpg',
         linkedin: 'https://www.linkedin.com/in/harshika-rathod',
         description: 'The meticulous record-keeper, managing accurate paperwork and data flow.'
     },
@@ -66,30 +66,30 @@ const coreTeam = [
         description: 'The digital storyteller, crafting engaging content and strategies to grow the online community.'
     },
     {
-        name: '(Kritank Singh)',
+        name: 'Kritank Singh',
         role: 'PR Lead',
         imageUrl: '/Team/Kritank_Singh.jpg',
-        linkedin: '#', 
+        linkedin: 'https://www.linkedin.com/in/kritank-singh-574269176/', 
         description: 'The voice of the brand, shaping perception and building a positive public image.'
     },
     {
-        name: '(Nandani Sanghi)',
+        name: 'Nandani Sanghi',
         role: 'Marketing Lead',
-        imageUrl: '/Team/Nandani_Sanghi.png',
-        linkedin: '#',
+        imageUrl: '/Team/Nandani_Sanghi.jpg',
+        linkedin: 'https://www.linkedin.com/in/nandani-sanghi-447967253/',
         description: 'The connector who builds strong relationships, spreading awareness, and fostering engagement.'
     },
     {
         name: 'Akshay Thakur',
         role: 'Core Member',
-        imageUrl: '/Team/Akshay_Thakur.png',
+        imageUrl: '/Team/Akshay_Thakur.jpg',
         linkedin: 'https://www.linkedin.com/in/akshay-thakur-55ba3b2a0',
         description: 'A dedicated member contributing to the club\'s technical and strategic initiatives.'
     },
     {
         name: 'Kaustubh Sharma',
         role: 'Core Member',
-        imageUrl: '/Team/Kaustubh_Sharma.png',
+        imageUrl: '/Team/Kaustubh_Sharma.jpg',
         linkedin: 'https://www.linkedin.com/in/kaustubh-sharma214',
         description: 'An enthusiastic learner passionate about exploring new dimensions in cybersecurity.'
     },
@@ -103,7 +103,7 @@ const coreTeam = [
     {
         name: 'Vansh Bisen',
         role: 'Core Member',
-        imageUrl: '/Team/Vansh_Bisen.png',
+        imageUrl: '/Team/Vansh_Bisen.jpg',
         linkedin: 'https://www.linkedin.com/in/vansh-bisen-80914b287/',
         description: 'A versatile member bringing fresh perspectives to the club\'s creative and technical tasks.'
     },
@@ -131,7 +131,7 @@ const coreTeam = [
     {
         name: 'Siddhesh Kherde',
         role: 'Core Member',
-        imageUrl: '/Team/Siddhesh_Kherde.png',
+        imageUrl: '/Team/Siddhesh_Kherde.jpg',
         linkedin: 'https://www.linkedin.com/in/siddhesh-kherde-5360032a9',
         description: 'A forward-thinking member with a strong interest in network and infrastructure security.'
     },
