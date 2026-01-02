@@ -1,4 +1,4 @@
-import { useState, useEffect } from 'react';
+import { useState, useEffect, useCallback } from 'react';
 
 function generateInaugurationImagePaths() {
     const paths = [];
@@ -131,17 +131,17 @@ export default function Gallery() {
         setSelectedAlbum(null);
     };
 
-    const goToNextImage = () => {
+    const goToNextImage = useCallback(() => {
         if (selectedAlbum) {
             setCurrentImageIndex((prevIndex) => (prevIndex + 1) % selectedAlbum.images.length);
         }
-    };
+    }, [selectedAlbum]);
 
-    const goToPrevImage = () => {
+    const goToPrevImage = useCallback(() => {
         if (selectedAlbum) {
             setCurrentImageIndex((prevIndex) => (prevIndex - 1 + selectedAlbum.images.length) % selectedAlbum.images.length);
         }
-    };
+    }, [selectedAlbum]);
 
     useEffect(() => {
         const handleKeyDown = (e: KeyboardEvent) => {

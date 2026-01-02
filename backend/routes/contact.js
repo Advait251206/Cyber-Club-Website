@@ -4,6 +4,10 @@ let Contact = require('../models/Contact.js');
 router.route('/').post((req, res) => {
     const { firstName, lastName, email, subject, message } = req.body;
 
+    if (!firstName || !lastName || !email || !subject || !message) {
+        return res.status(400).json({ error: 'All fields are required.' });
+    }
+
     const newContact = new Contact({
         firstName,
         lastName,

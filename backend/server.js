@@ -19,7 +19,7 @@ app.use(cors({
 app.use(express.json());
 
 const uri = process.env.MONGODB_URI;
-mongoose.connect(uri, { useNewUrlParser: true, useUnifiedTopology: true })
+mongoose.connect(uri)
   .then(() => console.log("✅ MongoDB connection established successfully"))
   .catch((err) => console.error("❌ MongoDB connection error:", err));
 

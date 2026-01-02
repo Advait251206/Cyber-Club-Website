@@ -40,13 +40,18 @@ export default function Contact() {
     const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
         e.preventDefault();
         setStatus('Sending...');
-        const submissionData = { ...formData, subject: formData.subject === 'Other' ? formData.otherSubject : formData.subject, };
-        delete (submissionData as any).otherSubject;
+        const cleanData = {
+            firstName: formData.firstName,
+            lastName: formData.lastName,
+            email: formData.email,
+            subject: formData.subject === 'Other' ? formData.otherSubject : formData.subject,
+            message: formData.message,
+        };
         try {
             const response = await fetch(`${import.meta.env.VITE_BACKEND_URL}/api/contact`, {
                 method: 'POST',
                 headers: { 'Content-Type': 'application/json', },
-                body: JSON.stringify(submissionData),
+                body: JSON.stringify(cleanData),
             });
             if (response.ok) {
                 setStatus('Message sent successfully!');

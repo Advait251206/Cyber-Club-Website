@@ -1,4 +1,4 @@
-export function Card(Props: any) {
+export function Card(Props: { i: string; t: string; d: string }) {
     return (
         <div className="flex flex-col h-full p-6 m-3 bg-gray-900 border border-green-300 rounded-lg hover:shadow-green-400 shadow-2xl transition-shadow duration-300">
        

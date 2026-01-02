@@ -101,7 +101,18 @@ export default function Events() {
 
     const [currentDate, setCurrentDate] = useState(new Date(today.getFullYear(), today.getMonth(), 1));
     
-    const [clickedEvent, setClickedEvent] = useState<any>(null);
+    interface CalendarEvent {
+        id: number;
+        title: string;
+        description?: string;
+        date: Date;
+        category: string;
+        location?: string;
+        events?: string; // For aarhantDays adaptation if needed, though they seem separate.
+        icon?: string;
+    }
+
+    const [clickedEvent, setClickedEvent] = useState<CalendarEvent | null>(null);
     const [isDetailViewActive, setIsDetailViewActive] = useState(false);
     const [openAccordion, setOpenAccordion] = useState<number | null>(null);
     const [calendarView, setCalendarView] = useState<'days' | 'months' | 'years'>('days');
@@ -125,7 +136,7 @@ export default function Events() {
         return days;
     };
 
-    const handleDayClick = (event: any) => {
+    const handleDayClick = (event: CalendarEvent | undefined) => {
         if (event) {
             setClickedEvent(event);
             setIsDetailViewActive(true);
@@ -164,7 +175,7 @@ export default function Events() {
         calendarView === 'months' ? year :
         `${yearRangeStart} - ${yearRangeStart + 11}`;
 
-    const getEventColor = (event: any) => {
+    const getEventColor = (event: CalendarEvent | undefined) => {
         if (!event) return 'bg-gray-800';
         if (event.date < today) return 'bg-blue-800/80 text-blue-200 font-bold cursor-pointer hover:bg-blue-700';
         if (event.category === 'Fest') return 'bg-purple-500/80 text-white font-bold cursor-pointer hover:bg-purple-400';

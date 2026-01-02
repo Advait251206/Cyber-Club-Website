@@ -5,137 +5,7 @@ const LinkedInIcon = () => (
     </svg>
 );
 
-const leadershipTeam = [
-    {
-        name: 'Bhushan Madankar',
-        role: 'President',
-        imageUrl: '/Team/Bhushan_Madankar.png',
-        linkedin: 'https://in.linkedin.com/in/bhushan-madankar/',
-        description: 'The visionary leader driving innovation, strategy, and cybersecurity excellence.'
-    },
-    {
-        name: 'Veersingh Bisen',
-        role: 'Vice President',
-        imageUrl: '/Team/Veer_Bisen.jpg',
-        linkedin: 'https://www.linkedin.com/in/veersingh-bisen-170b10257',
-        description: 'A strategic co-leader, supporting the president and guiding the club’s operational initiatives.'
-    },
-];
-
-const coreTeam = [
-    {
-        name: 'Arnav Varhade',
-        role: 'Secretary',
-        imageUrl: '/Team/Arnav_Varhade.jpg',
-        linkedin: 'https://www.linkedin.com/in/arnav-dinesh-varhade-18ba73258',
-        description: 'The organized strategist, ensuring seamless coordination, communication, and execution of plans.'
-    },
-    {
-        name: 'Mahak Arora',
-        role: 'Graphics Lead',
-        imageUrl: '/Team/Mahak_Arora.png',
-        linkedin: 'https://www.linkedin.com/in/mahak-arora16',
-        description: 'A creative visionary, transforming ideas into impactful designs that captivate and inspire.'
-    },
-    {
-        name: 'Om Gatlewar',
-        role: 'Web Dev Lead',
-        imageUrl: '/Team/Om_Gatlewar.jpg',
-        linkedin: 'https://www.linkedin.com/in/omgatlewar/',
-        description: 'The architect behind seamless digital experiences, driving innovation in web development.'
-    },
-    {
-        name: 'Harshika Rathod',
-        role: 'Documentation Lead',
-        imageUrl: '/Team/Harshika_Rathod.jpg',
-        linkedin: 'https://www.linkedin.com/in/harshika-rathod',
-        description: 'The meticulous record-keeper, managing accurate paperwork and data flow.'
-    },
-    {
-        name: 'Vanshika Sarda',
-        role: 'Management Lead',
-        imageUrl: '/Team/Vanshika_Sarda.jpg',
-        linkedin: 'https://www.linkedin.com/in/vanshika-sarda-b66022261/',
-        description: 'The strategic genius behind seamless logistics, blending innovation and passion.'
-    },
-    {
-        name: 'Abhineet Kumar',
-        role: 'Social Media Lead',
-        imageUrl: '/Team/Abhineet_Kumar.jpg',
-        linkedin: 'https://www.linkedin.com/in/abhineet-kumar-39a778261/',
-        description: 'The digital storyteller, crafting engaging content and strategies to grow the online community.'
-    },
-    {
-        name: 'Kritank Singh',
-        role: 'PR Lead',
-        imageUrl: '/Team/Kritank_Singh.jpg',
-        linkedin: 'https://www.linkedin.com/in/kritank-singh-574269176/', 
-        description: 'The voice of the brand, shaping perception and building a positive public image.'
-    },
-    {
-        name: 'Nandani Sanghi',
-        role: 'Marketing Lead',
-        imageUrl: '/Team/Nandani_Sanghi.jpg',
-        linkedin: 'https://www.linkedin.com/in/nandani-sanghi-447967253/',
-        description: 'The connector who builds strong relationships, spreading awareness, and fostering engagement.'
-    },
-    {
-        name: 'Akshay Thakur',
-        role: 'Core Member',
-        imageUrl: '/Team/Akshay_Thakur.jpg',
-        linkedin: 'https://www.linkedin.com/in/akshay-thakur-55ba3b2a0',
-        description: 'A dedicated member contributing to the club\'s technical and strategic initiatives.'
-    },
-    {
-        name: 'Kaustubh Sharma',
-        role: 'Core Member',
-        imageUrl: '/Team/Kaustubh_Sharma.jpg',
-        linkedin: 'https://www.linkedin.com/in/kaustubh-sharma214',
-        description: 'An enthusiastic learner passionate about exploring new dimensions in cybersecurity.'
-    },
-    {
-        name: 'Hitesh Chandak',
-        role: 'Core Member',
-        imageUrl: '/Team/Hitesh_Chandak.jpg',
-        linkedin: 'https://www.linkedin.com/in/hitesh-chandak-750a18258',
-        description: 'A proactive team player focused on driving innovation and collaborative projects.'
-    },
-    {
-        name: 'Vansh Bisen',
-        role: 'Core Member',
-        imageUrl: '/Team/Vansh_Bisen.jpg',
-        linkedin: 'https://www.linkedin.com/in/vansh-bisen-80914b287/',
-        description: 'A versatile member bringing fresh perspectives to the club\'s creative and technical tasks.'
-    },
-    {
-        name: 'Ishaan Khanchandani',
-        role: 'Core Member',
-        imageUrl: '/Team/Ishaan_Khanchandani.jpg',
-        linkedin: 'https://www.linkedin.com/in/ishaan-khanchandani-a0056732a',
-        description: 'A detail-oriented individual with a keen interest in digital forensics and security analysis.'
-    },
-    {
-        name: 'Kreeshna Gahlod',
-        role: 'Core Member',
-        imageUrl: '/Team/Kreeshna_Gahlod.jpeg',
-        linkedin: 'https://www.linkedin.com/in/kreeshna-g-b05960298/',
-        description: 'A creative problem-solver contributing to the club\'s marketing and outreach efforts.'
-    },
-    {
-        name: 'Niraj Bhakte',
-        role: 'Core Member',
-        imageUrl: '/Team/Niraj_Bhakte.jpg',
-        linkedin: 'https://www.linkedin.com/in/nirajbhakte23505',
-        description: 'A passionate technologist focused on web security and application development.'
-    },
-    {
-        name: 'Siddhesh Kherde',
-        role: 'Core Member',
-        imageUrl: '/Team/Siddhesh_Kherde.jpg',
-        linkedin: 'https://www.linkedin.com/in/siddhesh-kherde-5360032a9',
-        description: 'A forward-thinking member with a strong interest in network and infrastructure security.'
-    },
-];
+import { leadershipTeam, coreTeam } from '../data/TeamData';
 
 export default function Team() {
     return (
@@ -149,7 +19,7 @@ export default function Team() {
 
             <div className="mb-16">
                 <h2 className="text-3xl font-semibold text-blue-300 mb-8 text-center">Leadership Team</h2>
-                <div className="grid grid-cols-1 md:grid-cols-2 gap-10 max-w-4xl mx-auto">
+                <div className="grid grid-cols-1 md:grid-cols-3 gap-10 max-w-6xl mx-auto">
                     {leadershipTeam.map((member) => (
                         <div key={member.name} className="bg-gray-900 p-6 rounded-lg border border-green-300 text-center shadow-2xl hover:shadow-green-400 transition-shadow duration-300">
                             <img
@@ -175,9 +45,12 @@ export default function Team() {
 
             <div className="mb-20">
                 <h2 className="text-3xl font-semibold text-blue-300 mb-8 text-center">Core Team</h2>
-                <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-8">
+                <div className="flex flex-wrap justify-center gap-8">
                     {coreTeam.sort((a,b) => a.name.localeCompare(b.name)).map((member) => (
-                         <div key={member.name} className="bg-gray-900 p-6 rounded-lg border border-green-300 text-center shadow-2xl hover:shadow-green-400 transition-shadow duration-300 transform hover:-translate-y-1">
+                         <div 
+                            key={member.name} 
+                            className="w-full sm:w-[calc(50%-1rem)] lg:w-[calc(33.33%-1.33rem)] xl:w-[calc(25%-1.5rem)] bg-gray-900 p-6 rounded-lg border border-green-300 text-center shadow-2xl hover:shadow-green-400 transition-shadow duration-300 transform hover:-translate-y-1"
+                         >
                             <img
                                 src={member.imageUrl}
                                 alt={`Photo of ${member.name}`}
