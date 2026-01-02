@@ -83,7 +83,7 @@ export const coreTeam = [
     {
         name: 'Mahak Arora',
         role: 'Graphics Lead',
-        imageUrl: '/Team/Mahak_Arora.png',
+        imageUrl: '/Team/Mahak_Arora.jpg',
         linkedin: 'https://www.linkedin.com/in/mahak-arora16',
         description: 'A creative visionary, transforming ideas into impactful designs that captivate and inspire.'
     },
