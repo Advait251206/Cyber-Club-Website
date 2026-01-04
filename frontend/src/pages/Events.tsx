@@ -256,12 +256,12 @@ export default function Events() {
                             <div className="grid grid-cols-7 gap-2 text-center font-semibold">
                                 {['Sun', 'Mon', 'Tue', 'Wed', 'Thu', 'Fri', 'Sat'].map(day => <div key={day} className="text-gray-400">{day}</div>)}
                             </div>
-                            <div className="grid grid-cols-7 gap-2 text-center mt-2">
+                            <div className="grid grid-cols-7 gap-1 sm:gap-2 text-center mt-2">
                                 {calendarDays.map(d => ( 
                                     <div 
                                         key={d.key} 
                                         onClick={() => handleDayClick(d.event)} 
-                                        className={`p-2 h-12 flex items-center justify-center rounded-lg transition-colors ${d.event ? getEventColor(d.event) : d.day ? 'bg-gray-800' : 'bg-transparent'}`}
+                                        className={`p-1 sm:p-2 h-10 sm:h-12 flex items-center justify-center rounded-lg transition-colors text-sm sm:text-base ${d.event ? getEventColor(d.event) : d.day ? 'bg-gray-800' : 'bg-transparent'}`}
                                     >
                                         {d.day}
                                     </div> 
@@ -327,7 +327,7 @@ export default function Events() {
                                 <h3 className="text-lg font-semibold text-green-300">{event.title}</h3>
                                 <span className="text-gray-400 text-sm">{event.date}</span>
                             </button>
-                            <div className={`transition-all duration-300 ease-in-out ${openAccordion === event.id ? 'max-h-[40rem]' : 'max-h-0'}`}>
+                            <div className={`transition-all duration-300 ease-in-out ${openAccordion === event.id ? 'max-h-[200vh] opacity-100' : 'max-h-0 opacity-0'}`}>
                                 <div className="p-4 border-t border-gray-700">
                                     <p className="text-gray-300 whitespace-pre-wrap">{event.summary}</p>
                                     <p className="text-sm text-blue-300 mt-2">{event.participants} participants</p>

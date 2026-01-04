@@ -6,5 +6,6 @@
   height: 100vh; /* Fallback for browsers that don't support dvh */
   height: 100dvh; /* Dynamic viewport height for mobile browsers */
   object-fit: cover; /* Fills the screen without distorting the aspect ratio */
+  object-position: center center; /* Centers the video */
   z-index: -1; /* Puts the video BEHIND all other content */
 }

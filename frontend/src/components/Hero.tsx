@@ -19,7 +19,7 @@ export default function Hero() {
             <div className="absolute top-1/2 left-10 w-16 h-16 bg-purple-400 rounded-full opacity-25 animate-ping"></div>
             } */}
 
-            <div className="relative z-10 p-6 max-w-7xl mx-auto">
+            <div className="relative z-10 p-6 max-w-7xl mx-auto pt-20 lg:pt-6">
                 <div className="grid lg:grid-cols-2 gap-12 items-center">
                     <div className="space-y-8">
                         <AccentLine color="green" size="lg" className="w-24" />
@@ -96,7 +96,7 @@ export default function Hero() {
                         } */}
                     </div>
 
-                    <div className="relative">
+                    <div className="relative hidden lg:block">
                         <FloatingElement delay={300} duration={4000}>
                             <div className="relative">
                                 <div className="absolute -inset-4 bg-gradient-to-r from-green-400 to-blue-500 rounded-lg opacity-20 blur-xl"></div>
