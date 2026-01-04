@@ -244,9 +244,9 @@ export default function Events() {
                     
                     <div className="flex items-center justify-between mb-4">
                         <button onClick={handlePrev} className="px-4 py-2 bg-gray-700 rounded-lg hover:bg-gray-600 transition-colors">‹</button>
-                        <button onClick={handleHeaderClick} className="flex items-center justify-center px-4 py-2 bg-gray-700 rounded-lg hover:bg-gray-600 transition-colors cursor-pointer">
-                            <span className="text-xl font-bold text-blue-300">{headerText}</span>
-                            <span className="ml-2 text-blue-300 text-xs">▼</span>
+                        <button onClick={handleHeaderClick} className="flex items-center justify-center px-2 sm:px-4 py-2 bg-gray-700 rounded-lg hover:bg-gray-600 transition-colors cursor-pointer">
+                            <span className="text-sm sm:text-xl font-bold text-blue-300 truncate max-w-[120px] sm:max-w-none">{headerText}</span>
+                            <span className="ml-1 sm:ml-2 text-blue-300 text-[10px] sm:text-xs">▼</span>
                         </button>
                         <button onClick={handleNext} className="px-4 py-2 bg-gray-700 rounded-lg hover:bg-gray-600 transition-colors">›</button>
                     </div>
@@ -327,10 +327,12 @@ export default function Events() {
                                 <h3 className="text-lg font-semibold text-green-300">{event.title}</h3>
                                 <span className="text-gray-400 text-sm">{event.date}</span>
                             </button>
-                            <div className={`transition-all duration-300 ease-in-out ${openAccordion === event.id ? 'max-h-[200vh] opacity-100' : 'max-h-0 opacity-0'}`}>
+                            <div className={`grid transition-all duration-300 ease-in-out ${openAccordion === event.id ? 'grid-rows-[1fr] opacity-100' : 'grid-rows-[0fr] opacity-0'}`}>
+                                <div className="overflow-hidden">
                                 <div className="p-4 border-t border-gray-700">
                                     <p className="text-gray-300 whitespace-pre-wrap">{event.summary}</p>
                                     <p className="text-sm text-blue-300 mt-2">{event.participants} participants</p>
+                                </div>
                                 </div>
                             </div>
                         </div>
