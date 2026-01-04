@@ -6,7 +6,7 @@ import { Link } from 'react-router-dom';
 
 export default function Hero() {
     return (
-        <div className="relative min-h-screen flex items-center justify-center overflow-hidden">
+        <div className="relative min-h-[100dvh] flex items-center justify-center overflow-hidden">
             
             {/* Background Effects */}
             {/* {
@@ -31,7 +31,7 @@ export default function Hero() {
                         </div>
 
                         <div className="space-y-4">
-                            <div className="text-6xl lg:text-8xl font-extrabold drop-shadow-md">
+                            <div className="text-4xl sm:text-6xl lg:text-8xl font-extrabold drop-shadow-md">
                                 <Typewriter
                                     options={{
                                         strings: ['Cyber Club'],
@@ -57,13 +57,13 @@ export default function Hero() {
                             delay={800}
                         />
 
-                        <div className="flex items-center space-x-4 pt-4 -m-3">
+                        <div className="flex flex-wrap items-center gap-4 pt-4">
                             <AnimatedText delay={1000}>
                                 <a
                                   href="https://www.instagram.com/rbu_cyber_club/"
                                   target="_blank"
                                   rel="noopener noreferrer"
-                                  className="inline-block text-center font-semibold bg-green-500 p-4 w-40 m-3 rounded-2xl hover:bg-gradient-to-r from-lime-500 to-teal-300 transition-all duration-300 hover:scale-105"
+                                  className="inline-block text-center font-semibold bg-green-500 p-4 w-40 rounded-2xl hover:bg-gradient-to-r from-lime-500 to-teal-300 transition-all duration-300 hover:scale-105"
                                 >
                                     Follow Us
                                 </a>
@@ -71,7 +71,7 @@ export default function Hero() {
                             <AnimatedText delay={1200}>
                                 <Link
                                   to="/about"
-                                  className="inline-block text-center font-semibold bg-green-500 p-4 w-40 m-3 rounded-2xl hover:bg-gradient-to-r from-lime-500 to-teal-300 transition-all duration-300 hover:scale-105"
+                                  className="inline-block text-center font-semibold bg-green-500 p-4 w-40 rounded-2xl hover:bg-gradient-to-r from-lime-500 to-teal-300 transition-all duration-300 hover:scale-105"
                                 >
                                     Learn More
                                 </Link>
