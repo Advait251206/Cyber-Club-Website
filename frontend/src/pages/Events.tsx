@@ -3,12 +3,7 @@ import { useState } from 'react';
 // --- Helper Icons & Data (No changes in this section) ---
 // const CalendarIcon = () => <svg xmlns="http://www.w3.org/2000/svg" className="h-5 w-5 mr-2 inline" viewBox="0 0 20 20" fill="currentColor"><path fillRule="evenodd" d="M6 2a1 1 0 00-1 1v1H4a2 2 0 00-2 2v10a2 2 0 002 2h12a2 2 0 002-2V6a2 2 0 00-2-2h-1V3a1 1 0 10-2 0v1H7V3a1 1 0 00-1-1zm0 5a1 1 0 000 2h8a1 1 0 100-2H6z" clipRule="evenodd" /></svg>;
 // const LocationIcon = () => <svg xmlns="http://www.w3.org/2000/svg" className="h-5 w-5 mr-2 inline" viewBox="0 0 20 20" fill="currentColor"><path fillRule="evenodd" d="M5.05 4.05a7 7 0 119.9 9.9L10 18.9l-4.95-4.95a7 7 0 010-9.9zM10 11a2 2 0 100-4 2 2 0 000 4z" clipRule="evenodd" /></svg>;
-const aarhaantDays = [
-    { day: 'Day 1', date: '29th Oct (Wednesday)', events: 'Opening Ceremony | Imposter Hunt | Seminar', icon: '🕵️‍♂️' },
-    { day: 'Day 2', date: '30th Oct (Thursday)', events: 'Art Odyssey | Workshop | Open Mic Night', icon: '🎨' },
-    { day: 'Day 3', date: '31st Oct (Friday)', events: 'Scammer Zombie | Treasure Hunt | Firewall Fortress (ER)', icon: '🧟‍♀️' },
-    { day: 'Day 4', date: '1st Nov (Saturday)', events: 'E-Sports | Catch the Flag | Closing Ceremony', icon: '🎮' },
-];
+
 const pastEvents = [
     { 
         id: 11, 
@@ -87,13 +82,8 @@ const newCalendarEvents = [
 const interviewEventForCalendar = {
     id: 201, title: 'RBU Cyber Club Interviews', description: 'Interviews for new 2nd-year members.', date: new Date("Sep 16, 2025"), category: "Recruitment", location: "To be announced" 
 };
-const aarhaantCalendarEvents = [
-    { id: 101, title: 'AARHANT 2025 - Day 1', description: 'Opening Ceremony | Imposter Hunt | Seminar', date: new Date("Oct 29, 2025"), category: "Fest", location: "RBU Campus" },
-    { id: 102, title: 'AARHANT 2025 - Day 2', description: 'Art Odyssey | Workshop | Open Mic Night', date: new Date("Oct 30, 2025"), category: "Fest", location: "RBU Campus" },
-    { id: 103, title: 'AARHANT 2025 - Day 3', description: 'Scammer Zombie | Treasure Hunt | Firewall Fortress', date: new Date("Oct 31, 2025"), category: "Fest", location: "RBU Campus" },
-    { id: 104, title: 'AARHANT 2025 - Day 4', description: 'E-Sports | Catch the Flag | Closing Ceremony', date: new Date("Nov 1, 2025"), category: "Fest", location: "RBU Campus" },
-];
-const allCalendarEvents = [...aarhaantCalendarEvents, interviewEventForCalendar, ...newCalendarEvents];
+
+const allCalendarEvents = [interviewEventForCalendar, ...newCalendarEvents];
 
 export default function Events() {
     const today = new Date();
@@ -201,34 +191,7 @@ export default function Events() {
                 </p>
             </div>
 
-            <div className="mb-20 bg-gray-900 border-2 border-purple-500 rounded-2xl p-8 shadow-2xl hover:shadow-purple-500 transition-shadow duration-300">
-                <h2 className="text-4xl font-bold text-purple-300 text-center mb-2">⚡ AARHANT 2025 IS HERE!! ⚡</h2>
-                <p className="text-center text-lg text-gray-300 max-w-3xl mx-auto mt-4">
-                    Gear up for the most engaging and electrifying ride of events this season!
-                    Aarhant 2025 is where creativity meets competition, and this time… the zombies are taking over! 🧟‍♂️
-                </p>
-                <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 mt-10">
-                    {aarhaantDays.map(item => (
-                        <div key={item.day} className="bg-gray-800 p-6 rounded-lg border border-gray-700 hover:border-purple-400 transition-all duration-300">
-                            <h3 className="text-lg font-bold text-purple-300">{item.day} – {item.date} {item.icon}</h3>
-                            <p className="text-gray-400 mt-2 text-sm">{item.events}</p>
-                        </div>
-                    ))}
-                </div>
-                <p className="text-center text-lg font-semibold text-gray-300 mt-10">
-                    Participate, perform, and survive the most exciting fest of the year!
-                </p>
-                <div className="text-center mt-6">
-                    <a 
-                        href="https://forms.gle/wonvfv9cJf5x3Bec6" 
-                        target="_blank" 
-                        rel="noopener noreferrer"
-                        className="inline-block bg-gradient-to-r from-purple-500 to-pink-500 text-white font-bold text-lg px-10 py-4 rounded-lg shadow-lg hover:scale-105 transition-transform duration-300"
-                    >
-                        Register Now!
-                    </a>
-                </div>
-            </div>
+
 
             <div className={`grid grid-cols-1 lg:grid-cols-3 gap-12 mb-20 transition-all duration-500 ease-in-out`}>
                 <div className={`bg-gray-900 p-8 rounded-lg border border-green-300 shadow-2xl hover:shadow-green-400 transition-all duration-500 ease-in-out ${
