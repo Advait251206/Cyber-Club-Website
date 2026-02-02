@@ -57,7 +57,7 @@ export default function Hero() {
                             delay={800}
                         />
 
-                        <div className="flex flex-nowrap items-center justify-center gap-2 pt-4">
+                        <div className="flex flex-nowrap items-center justify-center lg:justify-start gap-2 pt-4">
                             <AnimatedText delay={1000}>
                                 <a
                                   href="https://www.instagram.com/rbu_cyber_club/"
