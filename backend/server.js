@@ -7,11 +7,7 @@ const app = express();
 const port = process.env.PORT || 5000;
 
 app.use(cors({
-  origin: [
-    'http://localhost:5173',
-    'https://cyber-club-website-git-main-advait-kawales-projects.vercel.app',
-    'https://cyber-club-website-advait-kawales-projects.vercel.app',
-  ],
+  origin: true, // Allows any origin to access the server
   methods: ['GET', 'POST'],
   credentials: true,
 }));
