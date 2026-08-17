@@ -15,9 +15,14 @@ app.use(cors({
 app.use(express.json());
 
 const uri = process.env.MONGODB_URI;
-mongoose.connect(uri)
-  .then(() => console.log("✅ MongoDB connection established successfully"))
-  .catch((err) => console.error("❌ MongoDB connection error:", err));
+
+if (uri) {
+  mongoose.connect(uri)
+    .then(() => console.log("✅ MongoDB connection established successfully"))
+    .catch((err) => console.error("❌ MongoDB connection error:", err));
+} else {
+  console.warn("⚠️ MONGODB_URI is not defined. Skipping database connection. Frontend will run, but backend DB features will not work.");
+}
 
 const contactRouter = require('./routes/contact');
 app.use('/api/contact', contactRouter);
