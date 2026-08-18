@@ -1,0 +1,19 @@
+version: '3.8'
+
+services:
+  backend:
+    image: advait251026/cyberclub-backend:latest
+    ports:
+      - "5000:5000"
+    environment:
+      - PORT=5000
+      - MONGODB_URI=${MONGODB_URI}
+    restart: always
+
+  frontend:
+    image: advait251026/cyberclub-frontend:latest
+    ports:
+      - "80:80"
+    depends_on:
+      - backend
+    restart: always
