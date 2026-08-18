@@ -2,7 +2,7 @@ version: '3.8'
 
 services:
   backend:
-    image: advait251026/cyberclub-backend:latest
+    image: advait251206/cyberclub-backend:latest
     ports:
       - "5000:5000"
     environment:
@@ -11,7 +11,7 @@ services:
     restart: always
 
   frontend:
-    image: advait251026/cyberclub-frontend:latest
+    image: advait251206/cyberclub-frontend:latest
     ports:
       - "80:80"
     depends_on:
